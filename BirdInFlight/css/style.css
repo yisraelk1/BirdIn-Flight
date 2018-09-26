@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Assistant', sans-serif;
+    background: #222;
+}
+
+/*
+.scrin {
+    width: 100%;
+    padding: 2vh 0;
+}
+*/
+
+input {
+    z-index: 1;
+    margin: 5px 10px;
+    width: 140px;
+    height: 50px;
+    line-height: 45px;
+    font-family: 'Bungee', cursive;
+    font-size: 16pt;
+    background-color: #001421;
+    color: #a28200;
+    text-transform: uppercase;
+    text-shadow: 0 1px 1px #ffdb7b, 0 2px 1px #ffc523, 0 3px 1px #5c4100, 0 4px 1px #4d3b00, 0 5px 1px #333333;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px 1px #000;
+    border: 2px solid #111;
+    transition: 0.3s ease-in-out;
+}
+
+input:hover {
+    margin-top: 10px;
+    color: #ffbc00;
+    text-shadow: 0 0px 2px #888, 0 0px 3px #333;
+    box-shadow: 0 0px 5px 0 #000;
+    border: 1px solid #fff;
+}
+
+.result {
+    z-index: 20;
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*
+    width: 400px;
+    height: 200px;
+*/
+    padding: 30px;
+    background: url(../imgs/images.jpg);
+    border-radius: 5px;
+}
+
+.text {
+
+    text-align: center;
+    font-size: 20pt;
+    /*    line-height: 50px;*/
+    color: #ddd;
+    text-shadow: 0 1px 1px #222, 0 2px 1px #333, 0 3px 1px #888, 0 4px 1px #555, 0 2px 1px #333, 0 2px 1px #aaa, 0 2px 1px #eee;
+}
+
+.text ul li {
+    list-style: none;
+    padding: 15px;
+}
+
+.result button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px 10px;
+    background-color: rgba(68, 68, 68, 1);
+    color: #fff;
+    font-size: 16pt;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+}
+
+.buttons {
+    position: absolute;
+    top: 7vh;
+    display: flex;
+    justify-content: center;
+    margin-left: calc(50% - 400px);
+    width: 800px;
+}
+
+.printTime {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 15px 20px;
+    text-align: center;
+    color: #fff;
+    font-size: 14pt;
+    background: #333;
+    border-radius: 5px;
+}
+
+.printTime button {
+    margin: 10px 7px 0 7px;
+    padding: 5px 10px;
+    background-color: #444;
+    color: #fff;
+    font-size: 12pt;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px 1px #000;
+    transition: 0.3s ease-in-out;
+}
+
+.printTime button:hover {
+    background-color: #222;
+    border: 2px solid #ccc;
+}
+
+.scoreLine {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 15px 20px;
+    text-align: center;
+    color: #fff;
+    background: #333;
+    font-size: 14pt;
+    border-radius: 5px;
+}
+
+.board {
+    position: relative;
+    margin: 20px auto;
+    width: 90%;
+    height: 90vh;
+    background: #bbb;
+    overflow: hidden;
+    cursor: url(../imgs/2038-200.png) 20 20, auto;
+    /*    cursor: crosshair;*/
+    border: 5px solid #ccc;
+    border-radius: 10px;
+}
+
+.board .img {
+    position: absolute;
+    left: 0;
+    left: -5%;
+    width: 60px;
+    height: 50px;
+    background-image: url(../imgs/plainicon.com-64832-128px-694.png);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.screen {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /*    background-color: rgba(0, 0, 0, 0.1);*/
+}
+
+.board .img1 {
+    position: absolute;
+    top: 130px;
+    width: 100%;
+    height: 50px;
+    background-color: #ffdd82;
+}
+
+
+.board .img2 {
+    position: absolute;
+    top: 210px;
+    width: 100%;
+    height: 50px;
+    background-color: #82a8ff;
+}
+
+.board .img3 {
+    position: absolute;
+    top: 290px;
+    width: 100%;
+    height: 50px;
+    background-color: #c1ff82;
+}
+
+.board .img4 {
+    position: absolute;
+    top: 370px;
+    width: 100%;
+    height: 50px;
+    background-color: #dd82ff;
+}
+
+.count_bullets {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px 60px;
+    text-align: center;
+    color: #fff;
+    background: #333;
+    font-size: 14pt;
+    border-radius: 5px;
+}
+
+.instruction {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 0 15px 0;
+    padding: 0px 20px;
+    font-family: 'Bungee', cursive;
+    font-size: 16pt;
+    background-color: #001421;
+    color: #a28200;
+    text-transform: uppercase;
+    text-shadow: 0 1px 1px #ffdb7b, 0 2px 1px #ffc523, 0 3px 1px #5c4100, 0 4px 1px #4d3b00, 0 5px 1px #333333;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px 1px #000;
+    border: 2px solid #111;
+    transition: 0.3s ease-in-out;
+}
+
+.instruction:hover {
+    margin-bottom: 10px;
+    color: #ffbc00;
+    text-shadow: 0 0px 2px #888, 0 0px 3px #333;
+    box-shadow: 0 0px 5px 0 #000;
+    border: 2px solid #111;
+}
+
+.theInstruction {
+    display: none;
+    direction: rtl;
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 40px;
+    color: #fff;
+    background: #333;
+    font-size: 12pt;
+    border-radius: 5px;
+}
+
+.theInstruction ol li ul {
+    padding: 0 20px 0 0;
+    list-style-type: hebrew;
+    font-weight: lighter;
+}
+
+.theInstruction ol > li,
+.theInstruction ol p {
+    padding: 5px;
+    font-weight: bold;
+}
+
+.birdsPassed {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 20px 60px;
+    text-align: center;
+    color: #fff;
+    background: #333;
+    font-size: 14pt;
+    border-radius: 5px;
+}
+
+
+
+
+input .alert {
+    font-size: 20pt;
+    background-color: #333;
+    color: #fff;
+}
