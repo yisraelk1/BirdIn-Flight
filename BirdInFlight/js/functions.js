@@ -130,14 +130,14 @@ function click() {
     }
 }
 
-
-var audiob = new Audio('../sound/Gun_Reload_sound.mp3');
+var audioa = new Audio('./sound/Gun_Reload_sound.mp3');
+var audiob = new Audio('./sound/Gun_Reload_sound.mp3');
 
 //*************************
 function reloaded() {
     clicks = 6;
     $('.count_bullets').html(bulletsLeft + clicks);
-    $('.board').css('cursor', 'url(../imgs/2038-200.png) 20 20, auto');
+    $('.board').css('cursor', 'url(./imgs/2038-200.png) 20 20, auto');
 };
 //*************************
 function updateScore() {
@@ -210,12 +210,12 @@ function getRndInteger(min, max) {
 //*************************
 
 
-// gamePaused false = true 
+// gamePaused false = true
 function continueGame() {
     if (gameStopped == false) {
         gamePaused = false;
         $('.count_bullets').html(bulletsLeft + clicks);
-        $('.board').css('cursor', 'url(../imgs/2038-200.png) 20 20, auto');
+        $('.board').css('cursor', 'url(./imgs/2038-200.png) 20 20, auto');
         interval = setInterval(delayBird, 1000);
     }
 }
@@ -274,8 +274,8 @@ function reset() {
 
 function stopGame() {
     if (gameStopped == false) {
-        gamePaused = true;
-        gameStopped = true;
+        //gamePaused = true;
+        //gameStopped = true;
         $('.result').animate({
             top: '50%'
         }, 1000);
